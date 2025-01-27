@@ -4,9 +4,8 @@
   "description": "",
   "main": "index.ts",
   "dependencies": {
-    "typescript": "^3.2.2"
+    "typescript": "^3.9.10"
   },
-  "devDependencies": {},
   "scripts": {
     "start": "node server",
     "redo_server_file": "tsc --allowJs --target esnext --removeComments --outFile server/index.js server/index.doc.js"

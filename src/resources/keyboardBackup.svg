@@ -1,0 +1,77 @@
+<svg viewBox="0 0 500 500" xmlns="http://www.w3.org/2000/svg" id="keyboardSVG">
+	<!--<param name="root3" value="1.732". M 18.5 43 />-->
+	<path d="M 10 10 h 5 s 3 0, 3 5 s -3 5, -5, 5 h -5 s -3 0, -3 -5 s 3 -5, 5 -5 " stroke="black"/>
+	
+	
+	<path id="key" d="
+		M 10 40 h 6 a 3 3, 0, 0, 1, 1.5 5.2 l -3 3 a 3 3, 0, 0, 1, -2 1 h -6 a 3 3, 0, 0, 1, -1.5 -5.2 l 3 -3 a 3 3, 0, 0, 1, 2 -1 Z
+		 m 8.5 3 v 6 a 3 3, 0, 0, 1, -1 2 l -2.5 2.5 a 3 3, 0, 0, 1, -2 1 h -6 a 3 3, 0, 0, 1, -3 -3 v -6"
+		 stroke="blue" fill = "grey">
+		<animate id="downStroke"
+			begin="keydown"
+	      	attributeName="d"
+	      	dur=".2s" fill="freeze"
+	      	values="
+		      	M 10 40 h 6 a 3 3, 0, 0, 1, 1.5 5.2 l -3 3 a 3 3, 0, 0, 1, -2 1 h -6 a 3 3, 0, 0, 1, -1.5 -5.2 l 3 -3 a 3 3, 0, 0, 1, 2 -1 Z
+			 		m 8.5 3 v 6 a 3 3, 0, 0, 1, -1 2 l -2.5 2.5 a 3 3, 0, 0, 1, -2 1 h -6 a 3 3, 0, 0, 1, -3 -3 v -6;
+			 	M 10 45 h 6 a 3 3, 0, 0, 1, 1.5 5.2 l -3 3 a 3 3, 0, 0, 1, -2 1 h -6 a 3 3, 0, 0, 1, -1.5 -5.2 l 3 -3 a 3 3, 0, 0, 1, 2 -1 Z
+		      		m 8.5 3 v 2 a 3 3, 0, 0, 1, -1 2 l -2.5 2.5 a 3 3, 0, 0, 1, -2 1 h -6 a 3 3, 0, 0, 1, -3 -3 v -2;"
+ 			
+	      	/>
+	      	<!--
+	      		M 10 44 h 6 a 3 3, 0, 0, 1, 1.5 5.2 l -3 3 a 3 3, 0, 0, 1, -2 1 h -6 a 3 3, 0, 0, 1, -1.5 -5.2 l 3 -3 a 3 3, 0, 0, 1, 2 -1 Z
+			 		m 8.5 3 v 3 a 3 3, 0, 0, 1, -1 2 l -2.5 2.5 a 3 3, 0, 0, 1, -2 1 h -6 a 3 3, 0, 0, 1, -3 -3 v -3; //for bounce -->
+	</path>
+	
+
+
+	<path id="key2em" d="
+		M 30 40 h 12 a 3 3, 0, 0, 1, 1.5 5.2 l -3 3 a 3 3, 0, 0, 1, -2 1 h -12 a 3 3, 0, 0, 1, -1.5 -5.2 l 3 -3 a 3 3, 0, 0, 1, 2 -1 Z
+		 m 14.5 3 v 6 a 3 3, 0, 0, 1, -1 2 l -2.5 2.5 a 3 3, 0, 0, 1, -2 1 h -12 a 3 3, 0, 0, 1, -3 -3 v -6"
+		 stroke="DimGray" fill = "gray">
+		<animate id="downStroke"
+			begin="indefinite"
+	      	attributeName="d"
+	      	dur=".2s" fill="freeze"
+	      	values="
+		      	M 30 40 h 12 a 3 3, 0, 0, 1, 1.5 5.2 l -3 3 a 3 3, 0, 0, 1, -2 1 h -12 a 3 3, 0, 0, 1, -1.5 -5.2 l 3 -3 a 3 3, 0, 0, 1, 2 -1 Z
+			 		m 14.5 3 v 6 a 3 3, 0, 0, 1, -1 2 l -2.5 2.5 a 3 3, 0, 0, 1, -2 1 h -12 a 3 3, 0, 0, 1, -3 -3 v -6;
+			 	M 30 45 h 12 a 3 3, 0, 0, 1, 1.5 5.2 l -3 3 a 3 3, 0, 0, 1, -2 1 h -12 a 3 3, 0, 0, 1, -1.5 -5.2 l 3 -3 a 3 3, 0, 0, 1, 2 -1 Z
+		      		m 14.5 3 v 2 a 3 3, 0, 0, 1, -1 2 l -2.5 2.5 a 3 3, 0, 0, 1, -2 1 h -12 a 3 3, 0, 0, 1, -3 -3 v -2;"
+ 			
+	      	/>
+	</path>
+
+	<!--
+
+	<path d="M 40 10 h 5 l -3 5 h -5 l 3 -5 Z" stroke="black" fill = "none"/>
+
+	<circle
+    cx="100"
+    cy="50"
+    stroke-width="2"
+    r="10"
+    pathLength="360"
+    stroke-dasharray="60 300"
+    stroke-dashoffset="-30"
+    stroke="black"
+    fill="none">
+	    <animate
+	    	attributeName=""
+	    	values="100;50;100"
+	    	dur="2s"
+	    	repeatCount="indefinite"/>
+	</circle>
+
+	
+	  
+
+	<path d="M 40 40 h 6 s 6 0, 3 6 s -4.5 6, -6 6 h -6 s -6 0, -3 -6 s 4.5 -6, 6 -6 Z" stroke="black"  fill = "none"/>
+	<path d="M 50 43 l 1.5 4.5 s .75 2.25, 0 3 l -1.5 3 s -1.5 4.5, -4.5 4.5 h -6 s -3 0, -4.5 -3 l -1.5 -4.5" stroke="black" fill = "none"/>
+	<path d="M 50 43 v 6 s 0 3, -.75 3 s -4.5 6, -6 6" stroke="red"  fill = "none"/>
+	 s 0 4.5, -6 4.5 h -6 s -6 0, -3 -6 v -6 "
+
+-->
+
+
+</svg>

@@ -9,7 +9,11 @@
   "compilerOptions": {
     //    Other compiler settings go here
     "strict": true,
-
+    "strictPropertyInitialization": false,
+    "resolveJsonModule": true,
+    "moduleResolution": "node",
+    "allowSyntheticDefaultImports":true,
+    "esModuleInterop": true,
     // -------------------------------------------------------------------------
     //    if you're adding your own, add them ABOVE the dotted line ^^^
     //    that way, these will override any we need that you accidentally add.
@@ -24,6 +28,6 @@
     // this is where you want the compiler to start if you want your compiled
     //    directory structure to match your source (you probably do)
     "rootDir": "./src",
-    "target": "es5",
+    "target": "es2015",
   }
 }

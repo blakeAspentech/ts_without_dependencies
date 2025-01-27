@@ -12,12 +12,15 @@ const determineContentType = extension => {
     css: 'text/css',
     js: 'text/javascript',
     html: 'text/html',
-    plain: 'text/plain'
+    json: 'application/json',
+    plain: 'text/plain',
+    svg: 'image/svg+xml'
   };
 
   if (extension in map) {
     return map[extension];
   } else {
+    console.log("error trying to determine extension: " + extension);
     return map.plain;
   }
 };
@@ -36,6 +39,12 @@ const getPath = request => {
   const parsedUrl = url.parse(request.url);
 
   if (isModuleRequest(request)) {
+    if (`${SERVER_ROOT_FOLDER}${parsedUrl.pathname}`.endsWith(`.json`))
+    {
+      console.log(`returning base url for ${SERVER_ROOT_FOLDER}${parsedUrl.pathname}`);
+      return `${SERVER_ROOT_FOLDER}${parsedUrl.pathname}`;
+    }
+    console.log(`returning js for ${SERVER_ROOT_FOLDER}${parsedUrl.pathname}`);
     return `${SERVER_ROOT_FOLDER}${parsedUrl.pathname}.js`;
   } else {
     if (parsedUrl.pathname === '/') {
@@ -55,9 +64,19 @@ const requestHandler = (request, response) => {
     return;
   }
 
+
   const filePath = getPath(request);
   const extension = path.parse(filePath).ext.replace('.', '');
-  const contentType = determineContentType(extension);
+  var contentType = determineContentType(extension);
+
+  /*if (request.url == '/resources/keyboard.json')
+  {
+    contentType = 'application/json';
+    //response.statusCode = 404;
+    response.end();
+    return;
+
+  }*/
 
   fs.readFile(filePath, (error, fileData) => {
     if (error) {
